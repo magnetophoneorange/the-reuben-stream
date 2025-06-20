@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const songList = document.getElementById('songList');
     const player = document.getElementById('player');
     const albumArt = document.getElementById('albumArt');
-    const searchInput = document.getElementById('searchInput');
     const playPauseBtn = document.getElementById('playPause');
     const stopBtn = document.getElementById('stop');
     const rewindBtn = document.getElementById('rewind');
@@ -10,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let songs = [];
     let isPlaying = false;
 
-    function renderSongs(filter = '') {
+    function renderSongs() {
         songList.innerHTML = '';
         songs
             .filter(song => song.title.toLowerCase().includes(filter.toLowerCase()))
@@ -42,9 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
             renderSongs();
         });
 
-    searchInput.addEventListener('input', (e) => {
-        renderSongs(e.target.value);
-    });
+
 
     playPauseBtn.onclick = () => {
         if (isPlaying) {
