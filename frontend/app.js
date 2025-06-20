@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                 `;
                 card.querySelector('button').onclick = () => {
-                    player.src = \`/stream/\${song.filename}\`;
+                    player.src = `/stream/${song.filename}`;
                     albumArt.src = song.artwork;
                     player.play();
                     isPlaying = true;
