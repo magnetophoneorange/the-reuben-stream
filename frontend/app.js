@@ -40,13 +40,14 @@ localStorage.setItem('reubenVisitorCount', count);
                 <button>Play ▶️</button>
             </div>
         `;
-        card.querySelector('button').onclick = () => {
-            player.src = `/stream/${song.filename}`;
-            albumArt.src = song.artwork;
-            player.play();
-            isPlaying = true;
-            playPauseBtn.textContent = '⏸️';
-        };
+       card.querySelector('button').onclick = () => {
+    player.src = `/stream/${song.filename}`;
+    albumArt.src = song.artwork;
+    document.getElementById('nowPlayingTitle').textContent = `Now playing: ${song.title}`;
+    player.play();
+    isPlaying = true;
+    playPauseBtn.textContent = '⏸️';
+};
         songList.appendChild(card);
     });
 }
@@ -61,6 +62,7 @@ localStorage.setItem('reubenVisitorCount', count);
         const randomSong = songs[Math.floor(Math.random() * songs.length)];
         player.src = `/stream/${randomSong.filename}`;
         albumArt.src = randomSong.artwork;
+        document.getElementById('nowPlayingTitle').textContent = `Now playing: ${randomSong.title}`;
         player.play();
         isPlaying = true;
         playPauseBtn.textContent = '⏸️';
