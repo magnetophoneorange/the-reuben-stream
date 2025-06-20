@@ -17,15 +17,15 @@ console.log("Setting up routes...");
 
 app.get('/songs', (req, res) => {
     const files = fs.readdirSync(MUSIC_DIR).filter(file => file.endsWith('.mp3'));
-    const songs = files.map(file => {
-        const name = path.parse(file).name;
-        return {
-            filename: file,
-            title: name.replace(/_/g, ' '),
-            artwork: `/album-art/${name}.jpg`
-        };
-    });
-    res.json(songs);
+const songs = files.map(file => {
+    const name = path.parse(file).name;
+    return {
+        filename: file,
+        title: name.replace(/_/g, ' '),
+        artwork: `/album-art/${name}.jpg`
+    };
+});
+res.json(songs);
 });
 
 app.get('/stream/:filename', (req, res) => {
