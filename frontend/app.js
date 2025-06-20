@@ -45,12 +45,20 @@ localStorage.setItem('reubenVisitorCount', parseInt(count) + 1);
     });
 }
 
-    fetch('/songs')
-        .then(res => res.json())
-        .then(data => {
-            songs = data;
-            renderSongs();
-        });
+   fetch('/songs')
+    .then(res => res.json())
+    .then(data => {
+        songs = data;
+        renderSongs();
+
+        // Autoplay a random track
+        const randomSong = songs[Math.floor(Math.random() * songs.length)];
+        player.src = `/stream/${randomSong.filename}`;
+        albumArt.src = randomSong.artwork;
+        player.play();
+        isPlaying = true;
+        playPauseBtn.textContent = '⏸️';
+    });
 
 
 
