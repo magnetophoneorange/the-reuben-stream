@@ -1,13 +1,19 @@
+console.log("Starting server setup...");
+
 const express = require('express');
-const fs = require('fs');
 const path = require('path');
+const fs = require('fs');
+
+console.log("Modules loaded.");
+
 const app = express();
-const PORT = process.env.PORT || 3000;
 
 app.use(express.static(path.join(__dirname, '../frontend')));
 app.use('/album-art', express.static(path.join(__dirname, '../album-art')));
 
 const MUSIC_DIR = path.join(__dirname, '../music');
+
+console.log("Setting up routes...");
 
 app.get('/songs', (req, res) => {
     const files = fs.readdirSync(MUSIC_DIR).filter(file => file.endsWith('.mp3'));
@@ -53,9 +59,10 @@ app.get('/stream/:filename', (req, res) => {
     }
 });
 
+console.log("Ready to start server...");
+
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
   console.log(`🎵 Music server running at http://localhost:${PORT}`);
-});
 });
