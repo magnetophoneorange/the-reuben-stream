@@ -5,34 +5,37 @@ document.addEventListener('DOMContentLoaded', () => {
     const playPauseBtn = document.getElementById('playPause');
     const stopBtn = document.getElementById('stop');
     const rewindBtn = document.getElementById('rewind');
+    // Fake visitor counter — incremented on each page load using localStorage
+const counterSpan = document.getElementById('counterDigits');
+let count = localStorage.getItem('reubenVisitorCount') || 1;
+counterSpan.textContent = String(count).padStart(6, '0');
+localStorage.setItem('reubenVisitorCount', parseInt(count) + 1);
 
     let songs = [];
     let isPlaying = false;
 
     function renderSongs() {
-        songList.innerHTML = '';
-        songs
-            .filter(song => song.title.toLowerCase().includes(filter.toLowerCase()))
-            .forEach(song => {
-                const card = document.createElement('div');
-                card.className = 'song-card';
-                card.innerHTML = `
-                    <img src="${song.artwork}" alt="Art for ${song.title}">
-                    <div class="info">
-                        <h3>${song.title}</h3>
-                        <button>Play ▶️</button>
-                    </div>
-                `;
-                card.querySelector('button').onclick = () => {
-                    player.src = `/stream/${song.filename}`;
-                    albumArt.src = song.artwork;
-                    player.play();
-                    isPlaying = true;
-                    playPauseBtn.textContent = '⏸️';
-                };
-                songList.appendChild(card);
-            });
-    }
+    songList.innerHTML = '';
+    songs.forEach(song => {
+        const card = document.createElement('div');
+        card.className = 'song-card';
+        card.innerHTML = `
+            <img src="${song.artwork}" alt="Art for ${song.title}">
+            <div class="info">
+                <h3>${song.title}</h3>
+                <button>Play ▶️</button>
+            </div>
+        `;
+        card.querySelector('button').onclick = () => {
+            player.src = `/stream/${song.filename}`;
+            albumArt.src = song.artwork;
+            player.play();
+            isPlaying = true;
+            playPauseBtn.textContent = '⏸️';
+        };
+        songList.appendChild(card);
+    });
+}
 
     fetch('/songs')
         .then(res => res.json())
