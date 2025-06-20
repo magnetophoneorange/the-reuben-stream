@@ -1,19 +1,15 @@
 {
-  "name": "The Reuben Stream",
-  "short_name": "RadioReuben",
-  "start_url": "/",
+  "name": "Radio Reuben",
+  "short_name": "Radio Reuben",
+  "icons": [
+    {
+      "src": "app-icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
   "display": "standalone",
-  "background_color": "#000000",
-  "theme_color": "#e85d04",
- "icons": [
-  {
-    "src": "app-icon.png",
-    "sizes": "512x512",
-    "type": "image/png",
-    "purpose": "any"
-  }
-],
-"name": "Radio Reuben",
-"short_name": "Radio Reuben",
-  ]
+  "theme_color": "#000000",
+  "background_color": "#000000"
 }
