@@ -5,10 +5,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const playPauseBtn = document.getElementById('playPause');
     const stopBtn = document.getElementById('stop');
     const rewindBtn = document.getElementById('rewind');
-    // Fake visitor counter — incremented on each page load using localStorage
-const counterSpan = document.getElementById('counterDigits');
+   // Fancy graphical visitor counter
+const counterDisplay = document.getElementById('counterDigits');
 let count = localStorage.getItem('reubenVisitorCount') || 1;
-counterSpan.textContent = String(count).padStart(6, '0');
+const digits = String(count).padStart(6, '0').split('');
+
+digits.forEach(d => {
+    const digit = document.createElement('span');
+    digit.className = 'digit';
+    digit.textContent = d;
+    counterDisplay.appendChild(digit);
+});
+
 localStorage.setItem('reubenVisitorCount', parseInt(count) + 1);
 
     let songs = [];
