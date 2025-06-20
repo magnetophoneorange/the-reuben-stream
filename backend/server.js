@@ -11,16 +11,21 @@ const MUSIC_DIR = path.join(__dirname, '../music');
 
 // Clean and correct /songs route
 app.get('/songs', (req, res) => {
-  const files = fs.readdirSync(MUSIC_DIR).filter(file => file.endsWith('.mp3'));
-  const songs = files.map(file => {
-    const name = path.parse(file).name;
-    return {
-      filename: file,
-      title: name.replace(/_/g, ' '),
-      artwork: `/album-art/${name}.jpg`
-    };
-  });
-  res.json(songs);
+  try {
+    const files = fs.readdirSync(MUSIC_DIR).filter(file => file.endsWith('.mp3'));
+    const songs = files.map(file => {
+      const name = path.parse(file).name;
+      return {
+        filename: file,
+        title: name.replace(/_/g, ' '),
+        artwork: `/album-art/${name}.jpg`
+      };
+    });
+    res.json(songs); // 🔥 This line is all that's needed
+  } catch (err) {
+    console.error("Error in /songs:", err);
+    res.status(500).json({ error: "Could not load song list" });
+  }
 });
 
 // Streaming route
