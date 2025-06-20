@@ -34,23 +34,24 @@ body {
 
 .song-card {
   width: 180px;
+  padding: 10px;
   background: white;
+  text-align: center;
   border: 1px solid #ccc;
   border-radius: 6px;
   overflow: hidden;
-  padding: 10px;
-  text-align: center;
   box-sizing: border-box;
 }
 
 .song-card img {
+  display: block;
   width: 100%;
   max-width: 160px;
   height: auto;
-  display: block;
-  margin: 0 auto 10px;
-  border-radius: 4px;
+  margin: 0 auto;
   object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 0 4px rgba(0,0,0,0.2);
 }
 
 .song-card .info {
