@@ -33,11 +33,14 @@ body {
 }
 
 .song-card {
-  border: 1px solid #ccc;
-  padding: 1rem;
-  width: 200px;
+  width: 180px;
   background: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  overflow: hidden;
+  padding: 10px;
   text-align: center;
+  box-sizing: border-box;
 }
 
 .song-card img {
@@ -48,8 +51,8 @@ body {
   margin: 0 auto 10px;
   border-radius: 4px;
   object-fit: cover;
-    
 }
+
 .song-card .info {
   padding: 0;
   margin-top: 0.5rem;
@@ -62,7 +65,6 @@ body {
     background: #fff7e6;
     border: 2px solid #e2b007;
     border-radius: 8px;
-}
 }
 
 #albumArt {
