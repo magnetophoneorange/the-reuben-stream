@@ -26,26 +26,23 @@ body {
 }
 
 #songList {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
 .song-card {
-    width: 200px;
-    background: white;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    overflow: hidden;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border: 1px solid #ccc;
+  padding: 1rem;
+  width: 200px;
+  background: white;
+  text-align: center;
 }
 
 .song-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+  max-width: 100%;
+  height: auto;
 }
 
 .song-card .info {
