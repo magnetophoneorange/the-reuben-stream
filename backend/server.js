@@ -16,16 +16,21 @@ const MUSIC_DIR = path.join(__dirname, '../music');
 console.log("Setting up routes...");
 
 app.get('/songs', (req, res) => {
+  try {
     const files = fs.readdirSync(MUSIC_DIR).filter(file => file.endsWith('.mp3'));
-const songs = files.map(file => {
-    const name = path.parse(file).name;
-    return {
+    const songs = files.map(file => {
+      const name = path.parse(file).name;
+      return {
         filename: file,
         title: name.replace(/_/g, ' '),
         artwork: `/album-art/${name}.jpg`
-    };
-});
-res.json(songs);
+      };
+    });
+    res.json(songs);  // ✅ clean JSON output
+  } catch (err) {
+    console.error("Error loading songs:", err);
+    res.status(500).json({ error: "Could not load song list" });
+  }
 });
 
 app.get('/stream/:filename', (req, res) => {
