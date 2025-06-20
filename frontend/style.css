@@ -52,6 +52,12 @@ body {
 #playerContainer {
     text-align: center;
     margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #fff7e6;
+    border: 2px solid #e2b007;
+    border-radius: 8px;
+}
 }
 
 #albumArt {
