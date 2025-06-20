@@ -1,15 +1,16 @@
 {
   "name": "Radio Reuben",
   "short_name": "Radio Reuben",
-  "icons": [
-    {
-      "src": "app-icon.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
-  ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#000000"
-}
+ "icons": [
+  {
+    "src": "app-icon.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }
+],
+"name": "Radio Reuben",
+"short_name": "Radio Reuben",
+"start_url": ".",
+"display": "standalone",
+"theme_color": "#000000",
+"background_color": "#000000"
