@@ -1,0 +1,12 @@
+{
+  "name": "reuben-stream",
+  "version": "1.0.0",
+  "description": "A 1970s-themed music streaming app",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
