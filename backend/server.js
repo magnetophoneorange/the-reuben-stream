@@ -2,7 +2,7 @@ const express = require('express');
 const fs = require('fs');
 const path = require('path');
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.use(express.static(path.join(__dirname, '../frontend')));
 app.use('/album-art', express.static(path.join(__dirname, '../album-art')));
@@ -53,6 +53,9 @@ app.get('/stream/:filename', (req, res) => {
     }
 });
 
+const PORT = process.env.PORT || 3000;
+
 app.listen(PORT, () => {
-    console.log(`🎵 Music server running at http://localhost:${PORT}`);
+  console.log(`🎵 Music server running at http://localhost:${PORT}`);
+});
 });
