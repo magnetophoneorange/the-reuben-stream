@@ -8,7 +8,13 @@ document.addEventListener('DOMContentLoaded', () => {
    // Fancy graphical visitor counter
 const counterDisplay = document.getElementById('counterDigits');
 let count = localStorage.getItem('reubenVisitorCount') || 1;
+count = parseInt(count);
+
+// 💥 Go up 10 each visit
+count += 10;
+
 const digits = String(count).padStart(6, '0').split('');
+counterDisplay.innerHTML = ''; // Clear previous digits if reloaded
 
 digits.forEach(d => {
     const digit = document.createElement('span');
@@ -17,7 +23,7 @@ digits.forEach(d => {
     counterDisplay.appendChild(digit);
 });
 
-localStorage.setItem('reubenVisitorCount', parseInt(count) + 1);
+localStorage.setItem('reubenVisitorCount', count);
 
     let songs = [];
     let isPlaying = false;
