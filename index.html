@@ -9,20 +9,11 @@
   <script defer src="app.js"></script>
 </head>
 <body>
-  <!-- Visitor Counter -->
-  <div id="counterDisplay">
-    <span id="counterDigits">000000</span>
-  </div>
-
-  <!-- Logo -->
+  <div id="counterDisplay"><span id="counterDigits">000000</span></div>
   <h1 class="logo">Radio Reuben</h1>
-
-  <!-- Player -->
   <div id="playerContainer">
     <img id="albumArt" src="" alt="Album Art" />
-    <div id="nowPlaying">
-      <h2 id="currentTrackTitle">Loading track...</h2>
-    </div>
+    <div id="nowPlaying"><h2 id="currentTrackTitle">Loading track...</h2></div>
     <audio id="player" controls></audio>
     <div id="cassetteControls">
       <button class="cassette-btn" id="rewind">⏪</button>
@@ -30,8 +21,6 @@
       <button class="cassette-btn" id="stop">⏹️</button>
     </div>
   </div>
-
-  <!-- Song List -->
   <div id="songList"></div>
 </body>
 </html>
