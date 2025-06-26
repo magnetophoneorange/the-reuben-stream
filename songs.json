@@ -1,7 +1,64 @@
-[
-  {
-    "filename": "music/Truckers_Luck.mp3",
-    "title": "Truckers Luck",
-    "artwork": "album-art/Truckers_Luck.jpg"
-  }
-]
+{\rtf1\ansi\ansicpg1252\cocoartf2821
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 [\
+  \{\
+    "filename": "music/Truckers_Luck.mp3",\
+    "title": "Truckers Luck",\
+    "artwork": "album-art/Truckers_Luck.jpg"\
+  \},\
+  \{\
+    "filename": "music/Bubble-O-Thrill.mp3",\
+    "title": "Bubble-O-Thrill",\
+    "artwork": "album-art/Bubble-O-Thrill.jpg"\
+  \},\
+  \{\
+    "filename": "music/Cracks_&_Broken_Glass.mp3",\
+    "title": "Cracks_&_Broken_Glass",\
+    "artwork": "album-art/Cracks_&_Broken_Glass.jpg"\
+  \}\
+ \{\
+    "filename": "music/Have_You_Seen_The_Light.mp3",\
+    "title": "Have_You_Seen_The_Light",\
+    "artwork": "album-art/Have_You_Seen_The_Light.jpg"\
+  \}\
+ \{\
+    "filename": "music/I've_Heard_That_One_Before.mp3",\
+    "title": "I've_Heard_That_One_Before",\
+    "artwork": "album-art/I've_Heard_That_One_Before.jpg"\
+  \}\
+ \{\
+    "filename": "music/Instant_Personality_Emporium.mp3",\
+    "title": "Instant_Personality_Emporium",\
+    "artwork": "album-art/Instant_Personality_Emporium.jpg"\
+  \}\
+ \{\
+    "filename": "music/It's_About_Time.mp3",\
+    "title": "It's_About_Time",\
+    "artwork": "album-art/It's_About_Time.jpg"\
+  \}\
+ \{\
+    "filename": "music/Reuben's_World.mp3",\
+    "title": "Reuben's_World",\
+    "artwork": "album-art/Reuben's_World.jpg"\
+  \}\
+ \{\
+    "filename": "music/Ronnie's_147.mp3",\
+    "title": "Ronnie's_147",\
+    "artwork": "album-artI/Ronnie's_147.jpg"\
+  \}\
+ \{\
+    "filename": "music/The_Last_Voyage_Of_The_Dickenberg_I.mp3",\
+    "title": "The_Last_Voyage_Of_The_Dickenberg_I",\
+    "artwork": "album-artI/The_Last_Voyage_Of_The_Dickenberg_I.jpg"\
+  \}\
+ \{\
+    "filename": "music/Theme_From_The_Electric_Potato_Test.mp3",\
+    "title": "Theme_From_The_Electric_Potato_Test",\
+    "artwork": "album-artI/Theme_From_The_Electric_Potato_Test.jpg"\
+  \}\
+]}
