@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Radio Reuben</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="app-icon.png" />
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <div id="counterDisplay"><span id="counterDigits">000000</span></div>
+  <h1 class="logo">Radio Reuben</h1>
+  <div id="playerContainer">
+    <img id="albumArt" src="" alt="Album Art" />
+    <div id="nowPlaying"><h2 id="currentTrackTitle">Loading track...</h2></div>
+    <audio id="player" controls></audio>
+    <div id="cassetteControls">
+      <button class="cassette-btn" id="rewind">⏪</button>
+      <button class="cassette-btn" id="playPause">▶️</button>
+      <button class="cassette-btn" id="stop">⏹️</button>
+    </div>
+  </div>
+  <div id="songList"></div>
+</body>
+</html>
